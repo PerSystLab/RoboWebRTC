@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi Webcam Stream</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Raspberry Pi Webcam Stream</h1>
+
+    <div class="connection-panel">
+        <input id="streamIdInput" type="text" placeholder="Enter Stream ID" />
+        <button id="connectButton">Connect</button>
+        <button id="disconnectButton" disabled>Disconnect</button>
+        <div class="status">
+            <span>Status: </span><span id="connectionStatus">Disconnected</span>
+        </div>
+        <div class="status">
+            <span>Latency: </span><span id="latency">--</span> ms
+        </div>
+    </div>
+
+    <div class="video-container">
+        <video id="remoteVideo" autoplay playsinline></video>
+    </div>
+</div>
+
+<script src="main.js" type="module"></script>
+</body>
+</html>
